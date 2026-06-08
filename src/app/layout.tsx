@@ -4,9 +4,10 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'CareerPilot AI | AI-Powered Career Architect',
-  description: 'Accelerate your career with AI resume analysis, intelligent job matching, and interactive interview coaching.',
-  keywords: ['AI career coach', 'resume analysis', 'job matching', 'interview preparation'],
+  title: 'CareerPilot AI | The AI-Powered Career Architect',
+  description: 'Accelerate your career with AI resume analysis, intelligent job matching, and interactive interview coaching. Land your dream job faster with CareerPilot AI.',
+  keywords: ['AI career coach', 'resume analysis', 'job matching', 'interview preparation', 'CareerPilot AI'],
+  metadataBase: new URL('https://careerpilotai.com'),
 };
 
 export default function RootLayout({
