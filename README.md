@@ -20,42 +20,11 @@ CareerPilot AI is a modern, high-performance web platform designed to help job s
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Deployment**: [Firebase App Hosting](https://firebase.google.com/docs/app-hosting)
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- Node.js 20 or later
-- A Google Cloud/Firebase Project for AI capabilities
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Valentina14142000/-ai-powered-career-coach.git
-   cd -ai-powered-career-coach
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Set up your environment variables:
-   Create a `.env` file and add your Google AI API Key:
-   ```env
-   GOOGLE_GENAI_API_KEY=your_api_key_here
-   ```
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-Open [http://localhost:9002](http://localhost:9002) with your browser to see the results.
-
+   
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-Built with ❤️ by Valentina & CareerPilot AI team.
+Built with ❤️ by Valentina Kiyungi.
