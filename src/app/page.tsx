@@ -90,7 +90,7 @@ export default function Home() {
                     <div key={i} className="group p-4 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-primary/30 transition-all cursor-pointer">
                       <div className="flex items-start justify-between">
                         <div className="flex gap-4">
-                          <div className="size-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-lg">
+                          <div className="size-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-lg text-white">
                             {['G', 'A', 'M'][i-1]}
                           </div>
                           <div>

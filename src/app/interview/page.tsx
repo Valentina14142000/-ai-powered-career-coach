@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -9,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { interactiveMockInterviewCoach, type InteractiveMockInterviewCoachOutput } from "@/ai/flows/interactive-mock-interview-coach-flow"
 import { Badge } from "@/components/ui/badge"
 import { Loader2, Mic2, Send, BrainCircuit, Star, BarChart3, Quote } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export default function MockInterviewPage() {
   const [question] = useState("Tell me about a time you had to handle a difficult technical challenge. How did you resolve it?")
@@ -147,8 +149,4 @@ export default function MockInterviewPage() {
       </div>
     </SidebarProvider>
   )
-}
-
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ')
 }
