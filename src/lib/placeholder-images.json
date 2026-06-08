@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract technological background with glowing lines",
+      "imageUrl": "https://picsum.photos/seed/career-hero/1920/1080",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "user-avatar",
+      "description": "Professional profile picture",
+      "imageUrl": "https://picsum.photos/seed/avatar-1/200/200",
+      "imageHint": "professional portrait"
+    }
+  ]
 }
