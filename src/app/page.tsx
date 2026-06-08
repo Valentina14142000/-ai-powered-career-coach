@@ -1,3 +1,4 @@
+
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 import { DashboardSidebar } from "@/components/dashboard-sidebar"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -16,6 +17,8 @@ import {
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const stats = [
   { label: "Matches Found", value: "124", icon: BrainCircuit, color: "text-primary" },
@@ -42,10 +45,12 @@ export default function Home() {
                 <Bell className="size-5" />
                 <span className="absolute top-2.5 right-2.5 size-2 bg-destructive rounded-full border-2 border-background" />
               </Button>
-              <Button className="h-11 px-6 rounded-xl font-semibold gap-2 ai-glow">
-                <Sparkles className="size-4" />
-                AI Match Now
-              </Button>
+              <Link href="/matches">
+                <Button className="h-11 px-6 rounded-xl font-semibold gap-2 ai-glow">
+                  <Sparkles className="size-4" />
+                  AI Match Now
+                </Button>
+              </Link>
             </div>
           </header>
 
@@ -102,7 +107,9 @@ export default function Home() {
                       </div>
                     </div>
                   ))}
-                  <Button variant="link" className="w-full text-primary hover:text-primary/80">View all matches</Button>
+                  <Link href="/matches">
+                    <Button variant="link" className="w-full text-primary hover:text-primary/80">View all matches</Button>
+                  </Link>
                 </CardContent>
               </Card>
 
@@ -111,24 +118,30 @@ export default function Home() {
                   <CardTitle className="font-headline text-2xl">Quick Actions</CardTitle>
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 gap-3">
-                  <Button variant="outline" className="h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
-                    <div className="size-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <FileText className="size-4 text-primary" />
-                    </div>
-                    Refresh Resume Analysis
-                  </Button>
-                  <Button variant="outline" className="h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
-                    <div className="size-8 rounded-lg bg-accent/20 flex items-center justify-center">
-                      <PenTool className="size-4 text-accent" />
-                    </div>
-                    Generate New Cover Letter
-                  </Button>
-                  <Button variant="outline" className="h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
-                    <div className="size-8 rounded-lg bg-green-400/20 flex items-center justify-center">
-                      <Mic2 className="size-4 text-green-400" />
-                    </div>
-                    Start Mock Interview
-                  </Button>
+                  <Link href="/resume">
+                    <Button variant="outline" className="w-full h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
+                      <div className="size-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                        <FileText className="size-4 text-primary" />
+                      </div>
+                      Refresh Resume Analysis
+                    </Button>
+                  </Link>
+                  <Link href="/cover-letter">
+                    <Button variant="outline" className="w-full h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
+                      <div className="size-8 rounded-lg bg-accent/20 flex items-center justify-center">
+                        <PenTool className="size-4 text-accent" />
+                      </div>
+                      Generate New Cover Letter
+                    </Button>
+                  </Link>
+                  <Link href="/interview">
+                    <Button variant="outline" className="w-full h-14 justify-start gap-4 px-4 bg-white/5 border-white/10 hover:bg-white/10 text-lg rounded-2xl">
+                      <div className="size-8 rounded-lg bg-green-400/20 flex items-center justify-center">
+                        <Mic2 className="size-4 text-green-400" />
+                      </div>
+                      Start Mock Interview
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -137,8 +150,4 @@ export default function Home() {
       </div>
     </SidebarProvider>
   )
-}
-
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ')
 }
